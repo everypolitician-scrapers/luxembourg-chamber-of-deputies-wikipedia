@@ -22,7 +22,7 @@ def scrape(url)
       next if a.attr('class') == 'new'
       data = { 
         name: a.text.strip,
-        wikipedia__lu: a.attr('title'),
+        wikipedia__lb: a.attr('title'),
       }
       ScraperWiki.save_sqlite([:wikipedia__lb], data)
     end
